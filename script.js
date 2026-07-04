@@ -1,5 +1,5 @@
 // TARGET UNLOCK TIME: JULY 6, 2026 00:00:00 LOCAL TIME
-const targetBirthdayTime = new Date("July 2, 2026 00:00:00").getTime();
+const targetBirthdayTime = new Date("July 6, 2026 00:00:00").getTime();
 
 const countdownScreen = document.getElementById("countdown-screen");
 const mainDeck = document.getElementById("main-deck");
