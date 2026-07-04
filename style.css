@@ -1,0 +1,399 @@
+/* --- BRANDING & PALETTE (Cheering Dark Party, Vivid Fuchsia & Gold) --- */
+:root {
+    --royal-gold: linear-gradient(45deg, #b38728, #fbf5b7, #daaf37, #fefcef, #aa771c);
+    --gold-solid: #f3c242;
+    --party-bg: #22030d;       /* Warm deep wine party background */
+    --vibrant-card: #380b18;   /* Brighter, glowing slide containers */
+    --silk-white: #ffffff;
+    --text-light: #fbf0f3;
+    --shadow-royal: 0 30px 60px rgba(231, 16, 102, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--party-bg);
+    /* Festive background glow spots */
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(218, 55, 123, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(218, 175, 55, 0.12) 0%, transparent 40%);
+    color: var(--text-light);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- COUNTDOWN OVERLAY --- */
+#countdown-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, #3a0617 0%, #0d0105 100%);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 1s ease-in-out;
+}
+
+#countdown-screen h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: #dfb143;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#countdown-screen h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    background: var(--royal-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+.timer-container {
+    display: flex;
+    gap: 25px;
+}
+
+.timer-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(223, 177, 67, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 100px;
+    backdrop-filter: blur(10px);
+}
+
+.timer-box span {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    display: block;
+    color: #fff;
+    font-weight: 600;
+}
+
+.timer-box p {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #dfb143;
+    margin-top: 5px;
+}
+
+/* --- SLIDE CONTAINER DECK LAYOUT --- */
+.royal-presentation {
+    display: none; 
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    gap: 80px;
+    padding: 60px 20px;
+    z-index: 10;
+}
+
+.royal-slide {
+    background-color: var(--vibrant-card);
+    border: 1px solid rgba(243, 194, 66, 0.3);
+    border-radius: 12px;
+    box-shadow: var(--shadow-royal);
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Regal Inner Border Frame */
+.royal-slide::before {
+    content: '';
+    position: absolute;
+    top: 20px; left: 20px; right: 20px; bottom: 20px;
+    border: 1px solid rgba(243, 194, 66, 0.15);
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.slide-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.slide-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    color: var(--gold-solid);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(243, 194, 66, 0.3);
+}
+
+.crown-line {
+    width: 100px;
+    height: 2px;
+    background: var(--royal-gold);
+    margin: 15px auto 0 auto;
+}
+
+/* --- TITLE SLIDE MODULE --- */
+.welcome-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-content h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+    color: #ff4081; /* Energetic pink cheering color accent */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(255, 64, 129, 0.4);
+}
+
+.welcome-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 92px;
+    color: var(--silk-white);
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 20px rgba(255,255,255,0.2), 0 0 30px rgba(243, 194, 66, 0.2);
+}
+
+.royal-subtitle {
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-solid);
+}
+
+/* --- FULLY GROUNDED 3D CSS CAKE WITH SIDE FRONT NAME --- */
+.cake-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    position: relative;
+}
+
+/* The Plate Container */
+.royal-plate {
+    position: absolute;
+    bottom: 80px; 
+    width: 440px;
+    height: 60px;
+    background: linear-gradient(180deg, #5c474a 0%, #1a1516 100%);
+    border: 2px solid rgba(243, 194, 66, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+/* The Cake Group Container */
+.cake-3d {
+    position: absolute;
+    bottom: 110px; /* Shifted down flawlessly into the center of the plate disk curve */
+    width: 360px;
+    height: 140px;
+    z-index: 2;
+}
+
+/* The Solid Cake Cylinder Body */
+.cake-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #500a1d 0%, #921b3a 50%, #500a1d 100%);
+    border-radius: 0 0 180px 180px / 0 0 45px 45px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers items perfectly inside the dark wall */
+}
+
+/* The Solid Frosting Top Disc Closing the Cylinder Base Ring */
+.cake-top-icing {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: -40px;
+    left: 0;
+    background: linear-gradient(135deg, #fffcfd 0%, #fbe2e7 100%);
+    border-radius: 50%;
+    box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Giant Golden foil name fixed explicitly onto the DARK front cake wall face */
+.vanshika-golden-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 72px;
+    font-weight: 700;
+    background: var(--royal-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8)); /* Bold shadow pops text perfectly off red wall */
+    transform: translateY(22px); /* Lowered directly onto center viewport face */
+    z-index: 5;
+    letter-spacing: 2px;
+}
+
+.royal-candle {
+    position: absolute;
+    bottom: 210px; /* Pierces cleanly into center top icing */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 80px;
+    background: linear-gradient(to right, #daaf37, #fffcee, #daaf37);
+    border-radius: 4px;
+    z-index: 4;
+}
+
+.royal-flame {
+    position: absolute;
+    top: -26px; left: 50%;
+    transform: translateX(-50%);
+    width: 20px; height: 30px;
+    background: #ffb300;
+    border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%;
+    box-shadow: 0 0 25px #ffb300, 0 0 50px #ff3d00, 0 0 70px rgba(255,61,0,0.5);
+    animation: flamePulse 0.4s infinite alternate ease-in-out;
+}
+
+@keyframes flamePulse {
+    0% { transform: translateX(-50%) scale(0.95) rotate(-2deg); }
+    100% { transform: translateX(-50%) scale(1.25) rotate(3deg); }
+}
+
+/* --- SPLIT WISHES LAYOUT --- */
+.split-layout {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.wish-text-block { flex: 12; }
+.wish-text-block p {
+    font-size: 19px;
+    line-height: 2;
+    color: #ebdbe0;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.wish-text-block p b {
+    color: var(--gold-solid);
+    font-family: 'Cinzel', serif;
+}
+
+.royal-signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 44px;
+    color: var(--gold-solid);
+    margin-top: 20px;
+    text-shadow: 0 0 10px rgba(243,194,66,0.3);
+}
+
+.wish-image-frame {
+    flex: 10;
+    border: 6px solid #fff;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 420px;
+}
+
+.wish-image-frame img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+/* --- POLAROID MEMORY GRID --- */
+.royal-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-card {
+    background: #fff;
+    padding: 16px 16px 35px 16px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 4px;
+}
+
+.gallery-card h4 {
+    color: #22030d;
+}
+
+.gallery-card:nth-child(1) { transform: rotate(-2deg); }
+.gallery-card:nth-child(2) { transform: rotate(1deg); }
+.gallery-card:nth-child(3) { transform: rotate(-1deg); }
+
+.gallery-card:hover {
+    transform: scale(1.06) rotate(0deg) !important;
+    box-shadow: 0 30px 60px rgba(243, 194, 66, 0.4);
+    z-index: 5;
+}
+
+.gallery-img-wrapper {
+    width: 100%; height: 290px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.gallery-img-wrapper img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.gallery-card h4 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* --- BACKGROUND POPPER CANVAS --- */
+#royal-popper-canvas {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* --- RESPONSIVE MEDIA ADAPTATION --- */
+@media (max-width: 900px) {
+    .split-layout { flex-direction: column; text-align: center; }
+    .royal-gallery { grid-template-columns: 1fr; gap: 40px; }
+    .gallery-card { transform: none !important; }
+    .royal-slide { padding: 40px 20px; }
+    .welcome-content h1 { font-size: 62px; }
+    .vanshika-golden-name { font-size: 54px; transform: translateY(18px); }
+    .royal-plate { width: 340px; bottom: 60px; }
+    .cake-3d { width: 280px; bottom: 85px; }
+}

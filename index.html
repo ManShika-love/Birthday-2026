@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Princess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- STAGE 1: ROYAL COUNTDOWN LOCK -->
+    <div id="countdown-screen">
+        <h2>Birthday loading... ⏳", "Almost time! ✨</h2>
+        <h1>My Dear Princess Vanshika</h1>
+        <div class="timer-container">
+            <div class="timer-box"><span id="d-days">00</span><p>Days</p></div>
+            <div class="timer-box"><span id="d-hours">00</span><p>Hours</p></div>
+            <div class="timer-box"><span id="d-minutes">00</span><p>Minutes</p></div>
+            <div class="timer-box"><span id="d-seconds">00</span><p>Seconds</p></div>
+        </div>
+        <p>&nbsp;</p>
+        <p class="lock-notice">ACCESS RESTRICTED UNTIL JULY 6TH, 12:00 AM</p>
+    </div>
+
+    <!-- STAGE 2: ROYAL SLIDE DECK CELEBRATION -->
+    <div class="royal-presentation" id="main-deck">
+        
+        <!-- SLIDE 1: PRESTIGE COVER -->
+        <div class="royal-slide fade-in">
+            <div class="welcome-content">
+                <h3>Happiest Birthday</h3>
+                <h1>To My Beautiful Princess</h1>
+                <p class="royal-subtitle">Vanshika Pandey</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: THE ROYAL REALISTIC CAKE (FIXED POSITION & NAME) -->
+        <div class="royal-slide">
+            <div class="slide-header">
+                <h2>My Sweetheart</h2>
+                <div class="crown-line"></div>
+            </div>
+            <div class="cake-stage">
+                <div class="royal-plate"></div>
+                <div class="cake-3d">
+                    <!-- Top icing is now clean white -->
+                    <div class="cake-top-icing"></div>
+                    <!-- Name is placed perfectly inside the dark front body layer -->
+                    <div class="cake-layer">
+                        <div class="vanshika-golden-name">Vanshika</div>
+                    </div>
+                </div>
+                <div class="royal-candle">
+                    <div class="royal-flame"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: IMPERIAL LOVE LETTER WITH MEMORY IMAGE -->
+        <div class="royal-slide">
+            <div class="slide-header">
+                <h2>Ruler of My Heart</h2>
+                <div class="crown-line"></div>
+            </div>
+            <div class="split-layout">
+                <div class="wish-text-block">
+                    <p>
+                        To my beautiful wife, my life partner, and my absolute princess—<b>Vanshika</b>. 
+                        You bring an unmatched warmth, grace, and pure radiance into my world every single day.
+                    </p>
+                    <p>
+                        May this special day bring you boundless joy, laughter, and the fulfillment of every beautiful dream your heart holds. Thank you for being my anchor and my greatest happiness.
+                    </p>
+                    <p class="royal-signature">Forever Yours, Manish ❤️</p>
+                </div>
+                <div class="wish-image-frame">
+                    <img src="DSC_8675.JPG" alt="Vanshika & Manish Focus">
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: POLAROID MEMORY GRID -->
+        <div class="royal-slide">
+            <div class="slide-header">
+                <h2>Our Precious Chapters</h2>
+                <div class="crown-line"></div>
+            </div>
+            <div class="royal-gallery">
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="Love.jpeg" alt="Memory 1">
+                    </div>
+                    <h4>Pure Magic ✨</h4>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="ruler.png" alt="Memory 2">
+                    </div>
+                    <h4>My Whole World 🌍</h4>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="its_us.jpeg" alt="Memory 3">
+                    </div>
+                    <h4>Lost in your Eyes ❤️</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Canvas Popper Overlay Elements -->
+    <canvas id="royal-popper-canvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
